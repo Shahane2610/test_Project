@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/postgres
+    jackson:
+      default-property-inclusion: NON_NULL
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties.hibernate.dialect: org.hibernate.dialect.PostgreSQLDialect
+    properties.hibernate.default_schema: test
+
+server:
+  port: 8090
+logging:
+  level.org.springframework: debug
